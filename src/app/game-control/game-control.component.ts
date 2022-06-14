@@ -21,10 +21,10 @@ export class GameControlComponent implements OnInit {
       this.intervalFired.emit(this.lastNumber + 1);
       this.lastNumber++;
     }, 1000);
-  
   }
-
-
-
+  
+  onPause(){
+    clearInterval(this.interval);
+  }
 
 }
